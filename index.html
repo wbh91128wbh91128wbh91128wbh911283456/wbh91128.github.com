@@ -1,8 +1,231 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Wangbinghua"><title>年华未央</title><meta name="description" content="不仅仅是程序员"><meta name="keywords" content="Hexo,HTML,CSS,android,Linux"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">年华未央</a></h3><div class="description"><p>不仅仅是程序员</p></div></div></div><ul class="social-links"><li><a href="http://weibo.com/wangbinghua91128"><i class="fa fa-weibo"></i></a></li><li><a href="http://github.com/wbh91128"><i class="fa fa-github"></i></a></li></ul></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">首页</a></li><li><a href="/about">关于博客</a></li><li><a href="/archives">时间线</a></li><li><a href="/links">友情链接</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2016/10/26/Web容器启动后做点事儿/">Web容器启动后做点事儿</a></h3></div><div class="post-content"><p>
-在Web容器启动时,就需要为让程序为我们做点事儿,比如需要启动一个后台线程开始扫描某个用户的在线时长或者我们需要初始化数据库连接等等.通常有两种方式可以解决,这就是我们今天的主题.
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="不仅仅是程序员">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      年华未央
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
 
-使用自定义的Servlet类,通过设置LoadOnStartUp属性值
-使用ServletContextListener监听器
-...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2016-10-26</span><i class="fa fa-tag"></i><a class="tag" href="/tags/java-java-web-spring-servlet/" title="java java-web spring servlet">java java-web spring servlet </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2016/10/23/类比servlet请求处理和java多线程处理/">类比servlet请求处理和java多线程处理</a></h3></div><div class="post-content"><p>Jvm的运行内存模型中，每一个线程拥有一个虚拟机栈，每一个线程执行方法时，一个栈帧压入到jvm内存模型的虚拟机栈中。而每一个栈帧针对一个方法，包含了局部变量表，返回地址，操作栈（将具体的方法翻译成指令），动态链接等。  
-有一个java多线程的程序说明：
-该类相当于一个任务类，开启的多个线程均需要执行任务类中的方...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2016-10-23</span><i class="fa fa-tag"></i><a class="tag" href="/tags/java-java-web-多线程-servlet/" title="java java-web 多线程 servlet">java java-web 多线程 servlet </a></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>年华未央</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/10/26/Web容器启动后做点事儿/">Web容器启动后做点事儿</a>
+      </h2>
+      <p class="article-date">2016年10月26日</p>
+      
+        
+  <a href="/tags#java" >
+    <span class="tag-code">java</span>
+  </a>
+
+  <a href="/tags#java-web" >
+    <span class="tag-code">java-web</span>
+  </a>
+
+  <a href="/tags#spring" >
+    <span class="tag-code">spring</span>
+  </a>
+
+  <a href="/tags#servlet" >
+    <span class="tag-code">servlet</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <blockquote>
+<p>在Web容器启动时,就需要为让程序为我们做点事儿,比如需要启动一个后台线程开始扫描某个用户的在线时长或者我们需要初始化数据库连接等等.通常有两种方式可以解决,这就是我们今天的主题.</p>
+<ul>
+<li>使用自定义的Servlet类,通过设置LoadOnStartUp属性值</li>
+<li>使用ServletContextListener监听器</li>
+</ul>
+</blockquote>
+<h3 id="Servlet的LoadOnStartUp属性设置"><a href="#Servlet的LoadOnStartUp属性设置" class="headerlink" title="Servlet的LoadOnStartUp属性设置"></a>Servlet的LoadOnStartUp属性设置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet</span>(name = <span class="string">"LoginServlet"</span>,urlPatterns = &#123;<span class="string">"/login"</span>&#125;,loadOnStartup = -<span class="number">1</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;    </span><br><span class="line">        <span class="comment">//具体的Servlet编写(init,destroy,post,get方法)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>loadOnStartUp的属性值决定了每一个Servlet的实例化时机,在<a href="https://wbh91128.github.io/2016/10/23/%E7%B1%BB%E6%AF%94servlet%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E5%92%8Cjava%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%A4%84%E7%90%86/" target="_blank" rel="noopener">&lt;类比servlet请求处理和java多线程处理&gt;</a>中已经说明每一个Servlet只会实例化一次,那么<strong>Servlet什么时候进行实例化呢?</strong></p>
+<blockquote>
+<p>每个Servlet的运行都遵行如下的生命周期.</p>
+<ul>
+<li>创建Servlet类的实例(何时创建?)</li>
+<li>Web容器执行Servlet类的init方法,对Servlet进行初始化.</li>
+<li>Web容器对其进行初始化之后,Servlet实例一直存在内存中,等待用户的请求和相应.如果用户客户端时get请求,则调用Servlet类的doGet方法,否则执行doPost方法.</li>
+<li>Web容器停止运行时,则销毁Servlet类,执行Servlet类的destroy方法.</li>
+</ul>
+</blockquote>
+<p><strong>回答刚才的问题:Web容器什么时候初始化Servlet类?</strong></p>
+        
+      </div>
+      <a class="more" href="/2016/10/26/Web容器启动后做点事儿/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/10/23/类比servlet请求处理和java多线程处理/">类比servlet请求处理和java多线程处理</a>
+      </h2>
+      <p class="article-date">2016年10月23日</p>
+      
+        
+  <a href="/tags#java java-web 多线程 servlet" >
+    <span class="tag-code">java java-web 多线程 servlet</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>Jvm的运行内存模型中，每一个线程拥有一个虚拟机栈，每一个线程执行方法时，一个栈帧压入到jvm内存模型的虚拟机栈中。而每一个栈帧针对一个方法，包含了局部变量表，返回地址，操作栈（将具体的方法翻译成指令），动态链接等。  </p>
+<p>有一个java多线程的程序说明：<br><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-f1c743702515b14a.png" alt="thread.png"></p>
+<p>该类相当于一个任务类，开启的多个线程均需要执行任务类中的方法，从而完成任务的执行。</p>
+<p><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-9edc9d44b7656c86.png" alt="1.png"></p>
+<p>在线程执行任务的时候，只会有一个任务，只需要实例化任务类一次，在整个过程中只有一个任务类实例，因此对于所有的线程都共享同一个任务类实例，即PrintContentTask类的实例。根据jvm规范中的运行时内存模型，每一个线程都有一个虚拟机栈，对于每一个线程执行方法时，都将该方法抽象成栈帧数据结构，并且push到虚拟机栈中。因此线程执行的每一个方法中，方法内的变量都是线程安全的，因为都是线程在私有的，而不是所有的线程进行共享。<br></p>
+        
+      </div>
+      <a class="more" href="/2016/10/23/类比servlet请求处理和java多线程处理/">Read more</a>
+    </article>
+  
+
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2018 | Author wangbinghua
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

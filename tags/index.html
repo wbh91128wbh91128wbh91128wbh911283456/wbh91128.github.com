@@ -10,7 +10,7 @@
   
   <title>
     
-      类比servlet请求处理和java多线程处理 | 年华未央
+      所有标签 | 年华未央
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
       
         <li class="list-item">
           
-            <a href="/tags" class="item-link">Tags</a>
+            <a href="/tags" class="item-link active">Tags</a>
           
         </li>
       
@@ -78,7 +78,7 @@
         
           <li class="menu-item">
             
-              <a href="/tags" class="menu-link">Tags</a>
+              <a href="/tags" class="menu-link mobile-active">Tags</a>
             
           </li>
         
@@ -100,8 +100,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>类比servlet请求处理和java多线程处理</h2>
-  <p class="post-date">2016-10-23</p>
+  <h2>所有标签</h2>
+  <p class="post-date">2018-01-07</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -109,29 +109,8 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>Jvm的运行内存模型中，每一个线程拥有一个虚拟机栈，每一个线程执行方法时，一个栈帧压入到jvm内存模型的虚拟机栈中。而每一个栈帧针对一个方法，包含了局部变量表，返回地址，操作栈（将具体的方法翻译成指令），动态链接等。  </p>
-<p>有一个java多线程的程序说明：<br><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-f1c743702515b14a.png" alt="thread.png"></p>
-<p>该类相当于一个任务类，开启的多个线程均需要执行任务类中的方法，从而完成任务的执行。</p>
-<p><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-9edc9d44b7656c86.png" alt="1.png"></p>
-<p>在线程执行任务的时候，只会有一个任务，只需要实例化任务类一次，在整个过程中只有一个任务类实例，因此对于所有的线程都共享同一个任务类实例，即PrintContentTask类的实例。根据jvm规范中的运行时内存模型，每一个线程都有一个虚拟机栈，对于每一个线程执行方法时，都将该方法抽象成栈帧数据结构，并且push到虚拟机栈中。因此线程执行的每一个方法中，方法内的变量都是线程安全的，因为都是线程在私有的，而不是所有的线程进行共享。<br><a id="more"></a></p>
-<p>在java web中的servlet请求中，有这样的场景，多个用户去请求同一个jsp页面。这个jsp页面被tomcat server编译成 servlet文件（java文件）。而多个用户（即多个线程）请求该java文件，即相当于多个线程在执行任务，而这个任务类即为jsp对应的servlet.java。</p>
-<p><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-7c4125e527425f5b.png" alt="2.png"></p>
-<p>Tomcat Server中，只生成Servlet.java类的一个实例，而所有的用户请求（即用户线程）会共享这个servlet类的所有的成员变量，而用户请求时，需要执行的方法（即执行的任务）为servlet类中的_jspService() 方法。</p>
-<p><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-6fa421764ff465a4.png" alt="3.png"></p>
-<p>这就相当于在java的多线程编程时，所有的线程共享同一个任务类，这个任务类实现Runnable接口，而所有的线程在执行的任务，即为任务类的run方法。每一个线程分别执行run方法，因此run方法中定义的变量都是线程安全的。</p>
-<p><img src="/2016/10/23/类比servlet请求处理和java多线程处理/2588290-bf0d892384b7b8db.png" alt="4.png"></p>
-<p>因此，在请求每一个Servlet时，或者jsp页面时，相应的servlet java文件只会实例化一次，而多个用户（即多个线程）进行请求，只是调用servlet java文件中的相应的方法。相当于多个线程在执行一个任务，任务类只会初始化成一个任务类的实例，而多个用户线程在调用时，只是调用的任务类的run方法。</p>
-</section>
+    <section class="markdown-content"></section>
     <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#java java-web 多线程 servlet" >
-    <span class="tag-code">java java-web 多线程 servlet</span>
-  </a>
-
-      </div>
     
     <!-- Tags END -->
     <!-- 打赏 START -->
@@ -152,7 +131,7 @@
 
 <script>
   (function () {
-    var url = 'http://wangbinghua.com/2016/10/23/类比servlet请求处理和java多线程处理/';
+    var url = 'http://wangbinghua.com/tags/index.html';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -208,7 +187,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "类比servlet请求处理和java多线程处理",
+        id: "所有标签",
         owner: "",
         repo: "",
         oauth: {
